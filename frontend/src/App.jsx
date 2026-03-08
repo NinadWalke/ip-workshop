@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
 import axios from 'axios';
 
+import Message from "./Message";
+
 function App() {
   const [counter, setCounter] = useState(0);
   const [userId, setUserId] = useState("");
@@ -19,7 +21,7 @@ function App() {
     <button onClick={modifyCounter}>
       Count {counter}
     </button>
-    <p>User ID fetched from the server: {userId}</p>
+    <Message userId={userId}/>
   </>
   );
 }
